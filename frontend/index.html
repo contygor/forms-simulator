@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastro e consulta de dados pessoais" />
+    <title>Seus dados, na nuvem, do seu jeito!</title>
+    <script src="/config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="form-card" aria-labelledby="page-title">
+        <h1 id="page-title">Seus dados, <em>na nuvem, do seu jeito!</em></h1>
+        <p class="intro">Preencha as informações abaixo ou consulte um cadastro existente.</p>
+
+        <nav class="tabs" aria-label="Ações do formulário">
+          <button class="tab is-active" type="button" data-tab="register">Cadastrar</button>
+          <button class="tab" type="button" data-tab="check">Consultar</button>
+        </nav>
+
+        <form id="register-form" class="form-panel is-visible" novalidate>
+          <div class="field-grid">
+            <label class="field">
+              <span>Nome</span>
+              <input name="nome" type="text" maxlength="100" autocomplete="given-name" placeholder="Ex.: Ana" required />
+            </label>
+            <label class="field">
+              <span>Sobrenome</span>
+              <input name="sobrenome" type="text" maxlength="100" autocomplete="family-name" placeholder="Ex.: Silva" required />
+            </label>
+          </div>
+          <label class="field">
+            <span>Data de nascimento</span>
+            <input name="dataNascimento" type="date" autocomplete="bday" required />
+          </label>
+          <label class="field">
+            <span>Cidade de nascimento</span>
+            <input name="cidadeNascimento" type="text" maxlength="150" autocomplete="address-level2" placeholder="Ex.: Recife" required />
+          </label>
+          <button class="primary-button" type="submit">
+            <span>Salvar cadastro</span>
+            <span class="button-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+        </form>
+
+        <form id="check-form" class="form-panel" novalidate hidden>
+          <div class="notice notice-private">
+            <span class="notice-icon" aria-hidden="true">i</span>
+            <p>Usaremos os dados somente para verificar se o cadastro existe.</p>
+          </div>
+          <div class="field-grid">
+            <label class="field">
+              <span>Nome</span>
+              <input name="nome" type="text" maxlength="100" autocomplete="off" placeholder="Ex.: Ana" required />
+            </label>
+            <label class="field">
+              <span>Sobrenome</span>
+              <input name="sobrenome" type="text" maxlength="100" autocomplete="off" placeholder="Ex.: Silva" required />
+            </label>
+          </div>
+          <label class="field">
+            <span>Data de nascimento</span>
+            <input name="dataNascimento" type="date" autocomplete="off" required />
+          </label>
+          <label class="field">
+            <span>Cidade de nascimento</span>
+            <input name="cidadeNascimento" type="text" maxlength="150" autocomplete="off" placeholder="Ex.: Recife" required />
+          </label>
+          <button class="secondary-button" type="submit">Verificar cadastro</button>
+        </form>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+        <p class="footer-note">Seus dados são tratados com cuidado.</p>
+      </section>
+      <div class="page-accent accent-one" aria-hidden="true"></div>
+      <div class="page-accent accent-two" aria-hidden="true"></div>
+    </main>
+  </body>
+</html>

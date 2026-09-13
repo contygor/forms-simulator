@@ -1,6 +1,10 @@
 # Build output
 [Bb]in/
 [Oo]bj/
+node_modules/
+dist/
+build/
+.vite/
 
 # Test results
 [Tt]est[Rr]esult*/

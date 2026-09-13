@@ -1,0 +1,1 @@
+window.FORMS_API_URL = "${FRONTEND_API_URL}";
