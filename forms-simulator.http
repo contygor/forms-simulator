@@ -1,0 +1,6 @@
+@forms_simulator_HostAddress = http://localhost:5065
+
+GET {{forms_simulator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
