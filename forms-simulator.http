@@ -1,6 +1,25 @@
 @forms_simulator_HostAddress = http://localhost:5065
 
-GET {{forms_simulator_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{forms_simulator_HostAddress}}/api/forms
+Content-Type: application/json
+
+{
+	"nome": "Ana",
+	"sobrenome": "Silva",
+	"dataNascimento": "1990-05-20T00:00:00",
+	"cidadeNascimento": "Recife"
+}
+
+###
+
+POST {{forms_simulator_HostAddress}}/api/forms/check
+Content-Type: application/json
+
+{
+	"nome": "Ana",
+	"sobrenome": "Silva",
+	"dataNascimento": "1990-05-20T00:00:00",
+	"cidadeNascimento": "Recife"
+}
 
 ###
