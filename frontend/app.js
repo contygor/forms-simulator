@@ -1,4 +1,4 @@
-const apiUrl = (window.FORMS_API_URL || "http://localhost:8080").replace(/\/$/, "");
+const apiUrl = (window.FORMS_API_URL || "").replace(/\/$/, "");
 const tabs = document.querySelectorAll("[data-tab]");
 const panels = {
   register: document.querySelector("#register-form"),

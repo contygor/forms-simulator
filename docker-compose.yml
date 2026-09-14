@@ -47,7 +47,7 @@ services:
     container_name: forms-frontend
     restart: unless-stopped
     environment:
-      FRONTEND_API_URL: http://localhost:8080
+      FRONTEND_API_URL: ""
     ports:
       - "3000:80"
     networks:

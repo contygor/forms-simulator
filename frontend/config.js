@@ -1,1 +1,1 @@
-window.FORMS_API_URL = "http://localhost:8080";
+window.FORMS_API_URL = "";
